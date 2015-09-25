@@ -1,0 +1,33 @@
+﻿@model UsersLibrary.Users
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Models/_LayoutPage.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(a => a.Username)</td>
+            <td>@Html.TextBoxFor(a => a.Username)</td>
+            <td>@Html.ValidationMessageFor(a => a.Username)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(a => a.Passwd)</td>
+            <td>@Html.PasswordFor(a => a.Passwd)</td>
+            <td>@Html.ValidationMessageFor(a => a.Passwd)</td>
+        </tr>
+        <tr>
+            <td>@Html.ActionLink("Back", "Index")</td>
+            <td>
+                <input type="submit" value="Login"/>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+}

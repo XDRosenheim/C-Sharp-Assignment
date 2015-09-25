@@ -1,0 +1,19 @@
+﻿@using System.Web.UI.WebControls
+@model UsersLibrary.Users
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/_LayoutPage.cshtml";
+}
+
+<h2>Index</h2>
+@if (Session["Username"] != null)
+{
+    <p>Welcome, @Session["Username"]</p>
+        @Html.ActionLink("Logud...", "Logud")
+
+}
+else
+{
+    @Html.ActionLink("Login...", "Login")
+}

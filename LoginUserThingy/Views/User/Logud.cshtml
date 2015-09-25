@@ -1,0 +1,9 @@
+﻿@model UsersLibrary.Users
+
+@{
+    ViewBag.Title = "Logud";
+    Layout = "~/Models/_LayoutPage.cshtml";
+}
+<!-- Denne siden kan kun ses hvis man er logget ind. -->
+<h2>You are logged out.</h2>
+@Html.ActionLink("Go to index", "Index")
